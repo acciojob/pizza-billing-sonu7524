@@ -8,17 +8,17 @@ public class Pizza {
 
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
+        System.out.print("Base Price Of The Pizza: ");
     }
 
-    public void getPrice(){
+    public int getPrice(){
         if(isVeg){
-            System.out.println("Base Price Of The Pizza: 300");
             this.price = 300;
         }
         else {
-            System.out.println("Base Price Of The Pizza: 400");
             this.price = 400;
         }
+        return price;
     }
     public void addExtraCheese(){
         System.out.println("Extra Cheese Added: 80");
