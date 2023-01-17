@@ -6,6 +6,9 @@ public class Pizza {
     private Boolean isVeg;
     private String bill;
 
+    private boolean cheese;
+    private boolean extratopping;
+
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         System.out.print("Base Price Of The Pizza: ");
@@ -21,25 +24,30 @@ public class Pizza {
         return price;
     }
     public void addExtraCheese(){
-        System.out.println("Extra Cheese Added: 80");
-        price += 80;
+        if(cheese == false) {
+            System.out.println("Extra Cheese Added: 80");
+            price += 80;
+            this.cheese = true;
+        }
     }
 
     public void addExtraToppings(){
-        if(isVeg == true){
-            price += 70;
-            System.out.println("Extra Cheese Added: 70");
+        if(extratopping==false){
+            if(isVeg == true){
+                price += 70;
+                System.out.println("Extra Toppings Added: 70");
+            }
+            else{
+                System.out.println("Extra Toppings Added: 120");
+                price += 120;
+            }
+            this.extratopping = true;
         }
-        else{
-            System.out.println("Extra Cheese Added: 120");
-            price += 120;
-        }
-
     }
 
     public void addTakeaway(){
-        System.out.println("Paperbag Added: 20");
-        price += 20;
+            System.out.println("Paperbag Added: 20");
+            price += 20;
     }
 
     public String getBill(){
