@@ -56,7 +56,7 @@ public class Pizza {
             else System.out.println("Extra Toppings Added: 120");
         }
         if(paperbag == true) System.out.println("Paperbag Added: 20");
-        this.bill = "Total bill :"+this.price;
+        this.bill = "Total Price: "+this.price;
         return this.bill;
     }
 }
