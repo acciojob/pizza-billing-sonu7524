@@ -8,14 +8,13 @@ public class Pizza {
     private int toppings;
     private int cheese;
 
-    private int paperbag;
-
     boolean isExtraCheeseAdded;
     boolean isExtraToppingAdded;
     boolean isTakeAwayAdded;
 
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
+        this.bill = "";
         if(isVeg){
             this.price = 300;
             this.toppings = 70;
@@ -56,7 +55,7 @@ public class Pizza {
         if(isExtraCheeseAdded) this.bill += "\nExtra Cheese Added: "+ this.cheese;
         if(isExtraToppingAdded) this.bill += "\nExtra Toppings Added: "+this.toppings;
         if(isTakeAwayAdded) this.bill += "\nPaperbag Added: 20";
-        this.bill += "\nTotal Price: "+this.price;
+        this.bill += "\nTotal Price: "+this.price+"\n";
         return this.bill;
     }
 }
